@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = prompt("nhap so ngau nhien tu 1 den 9");
+    var numberCompare = Math.floor((Math.random() * 10) + 1);
+    if (number >= 1 && number <= 9) {
+        if (number === numberCompare) {
+            alert("du doan dung");
+        }
+        else{
+            alert("du doan sai");
+        }
+    }
+    else{
+        alert("nhap sai yeu cau nhap lại");
+    }
+</script>
+</body>
+</html>
