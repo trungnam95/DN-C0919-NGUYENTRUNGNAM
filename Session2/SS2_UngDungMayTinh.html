@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <table border="1">
+        <tr>
+            <td>
+                <input id="firstNumber" type="text">
+                <input id="secondNumber" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="Tinh(this.value)" value="phep cong">
+                <input type="button" onclick="Tinh(this.value)" value="phep tru">
+                <input type="button" onclick="Tinh(this.value)" value="phep nhan">
+                <input type="button" onclick="Tinh(this.value)" value="phep chia">
+            </td>
+        </tr>
+    </table>
+</form>
+<body>
+<div id="thongBao"></div>
+<script>
+    var FirstNumber = document.getElementById("firstNumber");
+    var SecondNumber = document.getElementById("secondNumber");
+    function Tinh(e) {
+        if(e==="phep cong"){
+            document.getElementById("thongBao").innerHTML=(FirstNumber.value*1+SecondNumber.value*1);
+        }else if(e==="phep tru"){
+            document.getElementById("thongBao").innerHTML=(FirstNumber.value*1-SecondNumber.value*1);
+        }else if(e==="phep nhan"){
+            document.getElementById("thongBao").innerHTML=(FirstNumber.value*1*SecondNumber.value*1);
+        }else if(e==="phep chia"){
+            document.getElementById("thongBao").innerHTML=(FirstNumber.value*1/SecondNumber.value*1);
+        }
+    }
+
+   /* function tru() {
+        document.write(FirstNumber.value * 1 - SecondNumber.value * 1);
+    }
+
+    function nhan() {
+        document.write(FirstNumber.value * 1 * SecondNumber.value * 1);
+    }
+
+    function chia() {
+        document.write(FirstNumber.value * 1 / SecondNumber.value * 1);
+    }*/
+</script>
+</body>
+</html>

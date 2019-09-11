@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<form>
+    <table border="0.5">
+        <tr>
+            <th>Amount</th>
+            <th>From Current</th>
+            <th>To Currency</th>
+        </tr>
+        <tr>
+            <td>
+                <input id="soDonvi" type="number" >
+            </td>
+            <td>
+                <select id="listBeChange" onchange="getValue()">
+                    <option value="17000">Ustralia</option>
+                    <option value="1">VND</option>
+                    <option value="6000">Korean</option>
+                </select>
+            </td>
+            <td>
+                <select id="listChange" onchange="getValue()">
+                    <option value="23000">USD</option>
+                    <option value="6000">Korean</option>
+                    <option value="1">VND</option>
+                    <option value="17000">Ustralia</option>
+                </select>
+            </td>
+            <td> <input type="button" onclick="convert()" value="convert"></td>
+        </tr>
+    </table>
+</form>
+
+<body>
+    <script>
+       var soDonvi=document.getElementById("soDonvi");
+       var valueListBeChange=document.getElementById("listBeChange");
+       var valuelistChange=document.getElementById("listChange");
+       function convert() {
+           alert(soDonvi.value*(parseFloat(valueListBeChange.value)/parseFloat(valuelistChange.value)));
+       }
+    </script>
+</body>
+</html>
