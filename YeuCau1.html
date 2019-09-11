@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name = prompt("nhập vào tên");
+    let CMND = prompt("nhập vào số CMND");
+    let dateBorn = prompt("nhập vào ngày tháng năm sinh");
+    let mail = prompt("nhập vào email");
+    let address = prompt("nhập vào địa chỉ");
+    let type = prompt("nhập vào loại khách hàng");
+    let amount = prompt("nhập vào số lượng người đi cùng");
+    let rentDays = prompt("nhập vào số ngày thuê") * 1;
+    let typeOfService = prompt("nhập vào loại dịch vụ");
+    let typeOfRoom = prompt("Nhập vào loại phòng thuê");
+    let discount = prompt("Nhập vào % giảm giá") * 1;
+    if (typeOfService === "Villa") {
+        x = rentDays * 500;
+    } else if (typeOfService === "House") {
+        x = rentDays * 300;
+    } else if (typeOfService === "Room") {
+        x = rentDays * 100;
+    }
+    let result = ("họ và tên") + name + "\n" + ("cmnd") + CMND + "\n" + ("Ngày sinh: ") + dateBorn
+        + "\n" + ("Địa chỉ mail: ") + mail + "\n" + ("Địa chỉ nhà: ") + address + "\n" + ("Loại khách hàng") + type
+        + "\n" + ("Số lượng người đi cùng: ") + amount + "\n" + ("Số ngày thuê") + rentDays + "\n" + ("Loại dịch vụ: ")
+        + typeOfService + "\n" + ("Loại phòng thuê") + typeOfRoom + ("\n") + ("Discount") + discount + "\n" +
+        ("pay") + (x - (x * discount / 100));
+
+    alert(result);
+
+
+</script>
+</body>
+</html>
