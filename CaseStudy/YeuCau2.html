@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let name = "Nguyễn Trung Nam";
+    let CMND = "025757535";
+    let birthday = "10/04/1985";
+    let email = "nguyentrungnam100495@gmail.com";
+    let address = "Đà Nẵng";
+    let typeCustomer = "Gold";
+    let discount = 30;
+    let amountWith = "6";
+    let rentDay = 6;
+    let service = "Villa";
+    let typeRoom = "Vip";
+    let select = prompt("1.hiển thị thông tin khách hàng" + "\n" + "2.Sửa" + "\n" + "3.Show the amount to be paid after discount") * 1;
+    switch (select) {
+        case 1:
+            alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+            break;
+        case 2:
+            let edit = parseInt(prompt("1.Họ và tên" + name + "\n" + "2.Chứng minh nhân dân:" + CMND + "\n"
+                + "3.Ngày sinh:" + birthday + "\n" + "4.Email: " + email + "\n" + "5.Address: " + address + "\n" + "6.Loại Customer: "
+                + typeCustomer + "\n" + "7.Giảm giá: " + discount + "\n" + "8.Số lượng đi cùng: " + amountWith + "\n" + "9.Số ngày thuê: "
+                + rentDay + "\n" + "10.Dịch vu:" + service + "\n" + "11.Loại phòng: " + typeRoom));
+            switch (edit) {
+                case 1:
+                    let nameChange = prompt("Nhập vào tên bạn muốn sửa");
+                    alert("Họ và tên là: " + nameChange + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 2:
+                    let CMNDChange = prompt("Nhập vào CMND bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMNDChange + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 3:
+                    let birthdayChange = prompt("Nhập vào ngày sinh bạn muốn sửa") * 1;
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthdayChange +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 4:
+                    let emailChange = prompt("Nhập vào email bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + emailChange + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 5:
+                    let addressChange = prompt("Nhập vào Address bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + addressChange + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 6:
+                    let typeCustomerChange = prompt("Nhập vào loại customer bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomerChange + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 7:
+                    let discountChange = prompt("Nhập vào Giảm giá bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discountChange + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 8:
+                    let amountWithChange = prompt("Nhập vào số lượng đi cùng bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWithChange + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 9:
+                    let rentDayChange = prompt("Nhập vào số ngày thuê bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDayChange + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 10:
+                    let serviceChange = prompt("Nhập vào dịch vụ bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + serviceChange + "\n" + "Loại phòng: " + typeRoom);
+                    break;
+                case 11:
+                    let typeRoomChangee = prompt("Nhập vào loại phòng bạn muốn sửa");
+                    alert("Họ và tên là: " + name + "\n" + "Chứng minh nhân dân là: " + CMND + "\n" + "Ngày sinh: " + birthday +
+                        "\n" + "Email: " + email + "\n" + "Address: " + address + "\n" + "Loại Customer: " + typeCustomer + "\n"
+                        + "Giảm giá: " + discount + "\n" + "Số lượng đi cùng: " + amountWith + "\n" + "Số ngày thuê: " + rentDay + "\n" +
+                        "Dịch vu:" + service + "\n" + "Loại phòng: " + typeRoomChangee);
+                    break;
+                default:
+                    alert("false");
+            }
+            break;
+        case 3:
+            let currentYear = new Date().getFullYear();
+            let birthDay = new Date(birthday).getFullYear();
+            let ageCustomer = currentYear - birthDay;
+
+            if (service === "Villa") {
+                amountPay = (300 * rentDay * (1 - discount / 100));
+                if (address === "Đà Nẵng") {
+                    amountPay = (300 * rentDay * (1 - discount / 100)) - 20;
+                    if (rentDay > 7) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 50;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 65;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 67;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 66;
+                            }
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 60;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 62;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 61;
+                            }
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 55;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 57;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 56;
+                            }
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 52;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 54;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 53;
+                            }
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 50;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 52;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 51;
+                            }
+                        }
+                    } else if (rentDay >= 5 && rentDay <= 7) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 55;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 57;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 56;
+                            }
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 50;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 52;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 51;
+                            }
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 45;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 47;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 46;
+                            }
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 42;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 44;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 43;
+                            }
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 42;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 41;
+                            }
+                        }
+                    } else if (rentDay >= 2 && rentDay <= 4) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 30;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 45;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 47;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 46;
+                            }
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 42;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 41;
+                            }
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 35;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 37;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 36;
+                            }
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 32;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 34;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 33;
+                            }
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 30;
+                            if(ageCustomer>=30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 32;
+                            }else if(ageCustomer>=20 && ageCustomer<30){
+                                amountPay = (300 * rentDay * (1 - discount / 100)) - 31;
+                            }
+                        }
+                    }
+                } else if (address === "Huế") {
+                    amountPay = (300 * rentDay * (1 - discount / 100)) - 10;
+                    if (rentDay > 7) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 55;
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 50;
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 45;
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 42;
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                        }
+                    } else if (rentDay >= 5 && rentDay <= 7) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 30;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 45;
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 35;
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 32;
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 30;
+                        }
+                    } else if (rentDay >= 2 && rentDay <= 4) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 20;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 35;
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 30;
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 25;
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 22;
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 20;
+                        }
+                    }
+                } else if (address === "Quảng Nam") {
+                    amountPay = (300 * rentDay * (1 - discount / 100)) - 5;
+                    if (rentDay > 7) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 35;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 50;
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 45;
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 37;
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 35;
+                        }
+                    } else if (rentDay >= 5 && rentDay <= 7) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 25;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 40;
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 35;
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 30;
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 27;
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 25;
+                        }
+                    } else if (rentDay >= 2 && rentDay <= 4) {
+                        amountPay = (300 * rentDay * (1 - discount / 100)) - 15;
+                        if (typeCustomer === "Diamond") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 30;
+                        } else if (typeCustomer === "Platium") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 25;
+                        } else if (typeCustomer === "Gold") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 20;
+                        } else if (typeCustomer === "Silver") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 17;
+                        } else if (typeCustomer === "Member") {
+                            amountPay = (300 * rentDay * (1 - discount / 100)) - 15;
+                        }
+                    }
+                }
+                alert("Số tiền phải trả là: "+amountPay);
+            }
+            break;
+        default:
+            alert("false");
+
+    }
+</script>
+</body>
+</html>
