@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input id="month" type="text">
+    <input type="button" onclick="monthSoNgay()" value="Tính Số Ngày">
+</form>
+<div id="thongbao"></div>
+<script>
+   var month = document.getElementById("month");
+    function monthSoNgay() {
+      switch (month.value*1) {//switch trong function để thực hiện chức năng switch case
+          case 1:
+              document.getElementById("thongbao").innerHTML="tháng có 31 ngày";
+              break;
+          case 2:
+              let nam=prompt("nhập vào 1 năm bất kì để biết là năm nhuận thì có 28 ngày và ngược lại");
+              if (nam % 400 == 0 || (nam % 4 == 0 && nam % 100 != 0))
+              {
+                  alert("năm nhuận"+nam+"có 29 ngày");
+              } else
+                  alert("năm không nhuận"+nam+"có 28     ngày");
+              break;
+          case 3:
+              document.getElementById("thongbao").innerHTML="tháng có 31 ngày";
+              break;
+          case 4:
+              document.getElementById("thongbao").innerHTML="tháng có 30 ngày";
+              break;
+          case 5:
+              document.getElementById("thongbao").innerHTML="tháng có 31 ngày";
+              break;
+          case 6:
+              document.getElementById("thongbao").innerHTML="tháng có 30 ngày";
+              break;
+          case 7:
+              document.getElementById("thongbao").innerHTML="tháng có 31 ngày";
+              break;
+          case 8:
+              document.getElementById("thongbao").innerHTML="tháng có 30 ngày";
+              break;
+          case 9:
+              document.getElementById("thongbao").innerHTML="tháng có 31 ngày";
+              break;
+          case 10:
+              document.getElementById("thongbao").innerHTML="tháng có 31 ngày";
+              break;
+          case 11:
+              document.getElementById("thongbao").innerHTML="tháng có 30 ngày";
+              break;
+          case 12:
+              document.getElementById("thongbao").innerHTML="tháng có 31 ngày";
+              break;
+          default:
+              document.getElementById("thongbao").innerHTML="Nhập sai";
+      }
+    }
+</script>
+</body>
+</html>

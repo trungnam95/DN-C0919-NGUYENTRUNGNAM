@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<form>
+    <input type="text" id="sodien">
+    <input type="button" onclick="tinh()" value="tính">
+</form>
+<div id="txt"></div>
+<body>
+<script>
+
+    function tinh() {
+        let soDien = document.getElementById("sodien");
+        if (soDien.value >= 0 && soDien.value <= 50) {
+            let tong = soDien.value * 1678;
+            alert("bạn đang  trả điện năng tiêu thụ bậc 1 là:" + tong);
+        } else if (soDien.value > 50 && soDien.value <= 100) {
+            let tong = soDien.value * 1734;
+            alert("bạn đang  trả điện năng tiêu thụ bậc 2 là:" + tong);
+        } else if (soDien.value > 100) {
+            let tong = soDien.value * 1900;
+            alert("bạn đang  trả điện năng tiêu thụ bậc 3 là:" + tong);
+        }else{
+            document.getElementById("txt").innerHTML="nhập lại";
+        }
+    }
+
+    // let dienNang=prompt("nhập vào số điện năng tiêu thụ")*1;
+    // if(dienNang>=0 && dienNang<=50){
+    //     tong=dienNang*1678;
+    //     alert("bạn đang  trả điện năng tiêu thụ bậc 1 là:"+tong);
+    // }else if(dienNang>50 && dienNang<=100){
+    //     tong=dienNang*1734;
+    //     alert("bạn đang  trả điện năng tiêu thụ bậc 2 là:"+tong);
+    // }else if(dienNang>100){
+    //     tong=dienNang*1900;
+    //     alert("bạn đang  trả điện năng tiêu thụ bậc 3 là:"+tong);
+    // }
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h3>Nhập vào 3 trị số a,b,c của phương trình bậc 2:</h3><br>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <input type="text" id="c">
+    <input type="button" onclick="tinh()" value="tính">
+</form>
+<script>
+    let a=document.getElementById("a");
+    let b=document.getElementById("b");
+    let c=document.getElementById("c");
+
+    function tinh() {
+
+        let delta=Math.pow(b.value,2)-(4*a.value*c.value);//không cần *1 vì khi dùng phép tính khác + mặc định đã nhận
+        // giá trị số
+        if(delta<0){
+                alert("phương trình vô nghiệm");
+            }else if(delta===0){
+                alert("phương trình có nghiệm kép x1=x2="+(-b.value/(2*a.value)));
+            }else if(delta>0){
+                alert("phương trình có 2 nghiệm phân biệt x1="+((-b.value)+Math.sqrt(delta))/(2*a.value));
+                alert("phương trình có 2 nghiệm phân biệt x2="+((-b.value)-Math.sqrt(delta))/(2*a.value));
+            }
+    }
+    // let a=prompt("nhập vào giá trị a:")*1;
+    // let b=prompt("nhập vào giá trị a:")*1;
+    // let c=prompt("nhập vào giá trị a:")*1;
+    // delta=(b*b)-(4*a*c);
+    // if(delta<0){
+    //     alert("phương trình vô nghiệm");
+    // }else if(delta===0){
+    //     nghiemKep=-b/(2*a);
+    //     alert("phương trình có nghiệm kép x1=x2="+nghiemKep);
+    // }else if(delta>0){
+    //     nghiemDoi1=(-b+Math.sqrt(delta))/(2*a);
+    //     nghiemDoi2=(-b-Math.sqrt(delta))/(2*a);
+    //     alert("phương trình có 2 nghiệm phân biệt x1="+nghiemDoi1);
+    //     alert("phương trình có 2 nghiệm phân biệt x2="+nghiemDoi2);
+    // }
+</script>
+</body>
+</html>

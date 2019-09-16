@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="checkbox" onclick="stick()" name="ok" id="good">good<br>
+    <input type="checkbox" onclick="stick()" name="ok1" id="fast">fast<br>
+    <input type="checkbox" onclick="stick()" name="ok2" id="cheap">cheap<br>
+</form>
+<script>
+   function stick() {
+       let a=document.getElementById("good");
+       let b=document.getElementById("fast");
+       let c=document.getElementById("cheap");
+       if(a.checked===true && b.checked===true && c.checked===true){
+          alert("ok");
+       }else if(a.checked===true && c.checked===true){
+           b.checked===false;
+       }else if(b.checked===true && c.checked===true) {
+           a.checked===false;
+       }
+
+   }
+</script>
+</body>
+</html>
