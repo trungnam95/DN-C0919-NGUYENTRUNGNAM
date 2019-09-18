@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tong=0;
+    let number=prompt("nhập 1 số bất kì để bắt đầu chương trình nếu là quit thì kết thúc");
+    while (number!=="quit"){
+        let numberN=prompt("nhập vào 1 số để tính tổng các số nhập quit để kết thúc");
+        if(numberN!=="quit"){
+            tong+=parseInt(numberN);
+            numberN++;
+            alert(parseInt(tong));
+        }else
+        {
+            let quit=confirm("bạn có thật sự muốn thoát chương trình");
+            if(quit===true){
+                break;
+            }else{
+                let numberN=prompt("nhập vào 1 số để tính tổng các số nhập quit để kết thúc");
+                if(numberN!=="quit"){
+                    tong+=parseInt(numberN);
+                    numberN++;
+                    alert(parseInt(tong));
+                }
+            }
+        }
+    }
+
+
+</script>
+</body>
+</html>

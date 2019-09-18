@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num=parseInt(prompt("How many number you want : "));
+    let count =0;
+    let N=2;
+    while (count<num){
+        let demUoc=0;
+        for(let i=0;i<N ;i++){
+            if(N%i===0)demUoc++;
+        }
+        if (demUoc ===1) {
+            document.write(N + " ");
+            count++;
+        }
+        N++;
+    }
+</script>
+</body>
+</html>
+
+
