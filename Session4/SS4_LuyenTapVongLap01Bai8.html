@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="button" onclick="doanSo()" value="CHƠI">
+</form>
+<script>
+    function doanSo() {
+        let numberOne = parseInt(prompt("1.Đoán số trong khoảng từ 1 đến 10" + "\n" + "2.Đoán số trong khoảng từ 10 đến 20"));
+        switch (numberOne) {
+            case 1:
+                let dem=1;
+                var x = Math.floor((Math.random() * 10) + 1);
+                var number = parseInt(prompt("nhập vào số muốn đoán"));
+                if(number!==x) {
+                        do {
+                            if (number > x) {
+                                alert("số bạn nhập lớn hơn kết quả");
+                                number = parseInt(prompt("nhập vào số muốn đoán"));
+                                dem++;
+                            } else if (number < x) {
+                                alert("số bạn nhập bé hơn kết quả");
+                                number = parseInt(prompt("nhập vào số muốn đoán"));
+                                dem++;
+                            }
+                        } while (number !== x && dem<=2);
+                    alert("đoán đúng hoặc bạn đã nhập quá 3 lần");
+                }else{
+                    alert("đoán đúng");
+                }
+
+            case 2:
+        }
+    }
+</script>
+
+</body>
+</html>

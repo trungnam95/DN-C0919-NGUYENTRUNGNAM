@@ -1,0 +1,26 @@
+<!--Bài 5: Tính tổng của 20 số đầu tiên trong dãy fibonacci.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kq=0;
+    let total;
+    let num = 19;
+    let a = 1;
+    let b = 0;
+    while (num > 0) {
+        total = a;
+        a = a + b;
+        b = total;
+        num--;
+        kq+=b;
+    }document.write(kq);
+</script>
+
+
+</body>
+</html>
