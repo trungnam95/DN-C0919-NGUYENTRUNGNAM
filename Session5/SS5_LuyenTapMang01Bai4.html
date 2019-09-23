@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputAmount=parseInt(prompt("nhập vào số lượng:"));
+    let array=[];
+    for(let i=0;i<inputAmount;i++){
+        let input=parseInt(prompt("nhập vào giá trị thứ: "+i+"là: "));
+        array.push(input);
+    }document.write("mảng là: "+array+"<br>");
+        document.write("mảng đảo ngược là: "+array.reverse());
+    // for(let j=array.length-1;j>=0;j--){
+    //     document.write("mảng đảo ngược là :"+array[j]);
+    // }
+
+</script>
+</body>
+</html>

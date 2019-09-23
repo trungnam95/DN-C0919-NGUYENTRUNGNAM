@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let checkValidate = false;
+    let emailCustomer;
+    let birthdayCustomer;
+    let idCard;
+    let discount;
+    // let name = prompt("nhập vào tên");
+    // let CMND = prompt("nhập vào số CMND");
+    do{
+        // checkValidate=false;
+        discount=prompt("nhập vào % giảm giá");
+        if(!isNaN(discount)){
+            if(Number.parseFloat(discount)>=0 && Number.parseFloat(discount)<=100){
+                checkValidate=true;
+            }
+        }if(!checkValidate) {
+            alert("Nhập sai");
+        }
+    }while (!checkValidate);
+
+    do {
+        checkValidate=false;
+        idCard=prompt("Nhập vào CMND");
+        if(isNaN(idCard)){
+            alert("id card is invalid!!!Please try agian");
+           continue;
+        }
+        idCard=Number.parseFloat(idCard);
+        if(!Number.isInteger(idCard)){
+            alert("id card is invalid!!!Please try agian");
+            continue;
+        }
+        if(idCard >=100000000 && idCard<=999999999){
+            checkValidate=true;
+        }
+        else {
+            alert("id card is invalid!!!Please try agian");
+        }
+    }while(!checkValidate);
+    do {
+        checkValidate = false;
+        birthdayCustomer = prompt("nhập vào ngày tháng năm sinh");
+        if(birthdayCustomer.charAt(2)!=="/"||birthdayCustomer.charAt(5)!=="/"){
+            alert("Birthday is invalid!!!please try again");
+            continue;
+        }
+        let day=birthdayCustomer.substring(0,2);
+        let month=birthdayCustomer.substring(3,5);
+        let year=birthdayCustomer.substring(6,10);
+        if(!isNaN(day)&& !isNaN(month) && !isNaN(year)){
+            day=Number.parseFloat(day);
+            month=Number.parseFloat(month);
+            year=Number.parseFloat(year);
+            if(Number.isInteger(day)&&Number.isInteger(month)&& Number.isInteger(year)){
+                if(day >0 && day<32 && month>0 && month<13 && year>=1960 && year<=2019){
+                    checkValidate=true;
+                }
+            }
+        }
+        if(!checkValidate){
+            alert("Birthday is invalid!!!please try again");
+        }
+    } while (!checkValidate);
+
+    do {
+        checkValidate = true;
+        emailCustomer = prompt("nhập vào email");
+        let countDoc = 0;
+        let countAt = 0;
+        for (let i = 0; i < emailCustomer.length; i++) {
+            if (emailCustomer.charAt(i) === "@") {
+                countAt++;
+            }
+            if (emailCustomer.charAt(i) === ".") {
+                countDoc++;
+            }
+        }
+        if (countAt !== 1 || countDoc < 1) {
+            checkValidate = false;
+            alert("Email is invalid!!! Please try again.")
+        }
+    } while (!checkValidate);
+
+    alert(birthdayCustomer+"\n"+emailCustomer+"\n"+idCard+"\n"+discount);
+
+
+
+    // let address = prompt("nhập vào địa chỉ");
+    // let type = prompt("nhập vào loại khách hàng");
+    // let amount = prompt("nhập vào số lượng người đi cùng");
+    // let rentDays = prompt("nhập vào số ngày thuê") * 1;
+    // let typeOfService = prompt("nhập vào loại dịch vụ");
+    // let typeOfRoom = prompt("Nhập vào loại phòng thuê");
+
+    // if (typeOfService === "Villa") {
+    //     x = rentDays * 500;
+    // } else if (typeOfService === "House") {
+    //     x = rentDays * 300;
+    // } else if (typeOfService === "Room") {
+    //     x = rentDays * 100;
+    // }
+    // let result = ("họ và tên: ") + name + "\n" + ("cmnd: ") + CMND + "\n" + ("Ngày sinh: ") + dateBorn
+    //     + "\n" + ("Địa chỉ mail: ") + mail + "\n" + ("Địa chỉ nhà: ") + address + "\n" + ("Loại khách hàng: ") + type
+    //     + "\n" + ("Số lượng người đi cùng: ") + amount + "\n" + ("Số ngày thuê: ") + rentDays + "\n" + ("Loại dịch vụ: ")
+    //     + typeOfService + "\n" + ("Loại phòng thuê: ") + typeOfRoom + ("\n") + ("Discount: ") + discount + "\n" +
+    //     ("pay: ") + (x - (x * discount / 100));
+    //
+    // alert(result);
+
+
+</script>
+</body>
+</html>

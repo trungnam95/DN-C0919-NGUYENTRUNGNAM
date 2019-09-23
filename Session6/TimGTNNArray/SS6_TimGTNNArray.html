@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="SS6_TImGTNNArray.js"></script>
+</head>
+<body>
+<SCRIPT>
+
+    let array = [];
+    let check = false;
+    do {
+        inputAmount = parseInt(prompt("yêu cầu nhập số phần tử lớn hơn bằng 1"));
+        if (inputAmount >= 1) {
+            check = true;
+        }
+    } while (!check);
+    // let inputAmount = parseInt(prompt("nhập vào số lượng phần tử trong mảng:"));
+    for (let i = 1; i <= inputAmount; i++) {
+        let input = parseInt(prompt("nhập vào giá trị thứ: " + i + "là: "));
+        array.push(input);
+    }
+    let min = minArray(array);
+    alert(min);
+    // let arr1 = [];
+    // let min = minArray(arr1);
+    // alert(min);
+</SCRIPT>
+</body>
+</html>

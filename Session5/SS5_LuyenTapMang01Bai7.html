@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrayAmount=parseInt(prompt("Nhập vào số lượng phần tử trong mảng"));
+    let array=[];
+    for (let i=1;i<=arrayAmount;i++) {
+        let input=parseInt(prompt("Nhập vào phần tử thứ "+i+"là: "));
+        array.push(input);
+    }
+    let inputFind=parseInt(prompt("Nhập vào phần tử muốn xóa trong mảng"));
+    let check=false;
+    for (let j=0;j<array.length;j++){
+        if(inputFind===array[j]){
+            array[j]=array[j+1];
+            array[j+1]=0;
+            check=true;
+            }
+        document.write(array[j]);
+    }
+    if(!check){
+        document.write("ko tồn tại trong mảng");
+    }
+</script>
+</body>
+</html>

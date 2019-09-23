@@ -1,0 +1,76 @@
+<!--Xây dựng game caro đơn giản sử dụng phần thực hành về tạo bàn cờ caro. Bàn cờ thay vì số 0 hiển thị mặc định bằng
+dấu (.).-->
+<!--Có 2 người chơi lần lượt nhập vào là X và O. Mỗi lần giá trị được nhập vào thì bàn cờ thay đổi giá trị theo người chơi.-->
+<!--Xác định người chiến thằng nhập giá trị có 3 ô liên tiếp giống nhau.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <h3>Game Caro Simple</h3>
+    <p id="caroGame"></p>
+<!--    <input type="button" value="Change Value" onclick="changeValue()">-->
+</form>
+<script>
+    let b=document.getElementById("caroGame");
+    let board=[];
+    let data="";
+    for(let i=0;i<5;i++){
+        board[i]=[".       ",".          ",".        ",".         ",".         "];
+    }
+    for (let i=0;i<5;i++){
+        data+="<br>";
+        for(let j=0;j<5;j++){
+            data+=board[i][j];
+        }
+    }
+
+    data+="<br/><br/><input type='button' value='Change Value 1' onclick='changeValue1()'>";
+    b.innerHTML=data;
+    data+="<br/><br/><input type='button' value='Change Value 2' onclick='changeValue2()'>";
+    b.innerHTML=data;
+    function changeValue1() {
+        let positionX = prompt("X: ");
+        let positionY = prompt("Y: ");
+        data = "";
+        board[positionX][positionY] = "x";
+        for (let i = 0; i < 5; i++) {
+            data += "<br/>";
+            for (let j = 0; j < 5; j++) {
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+            }
+        }
+
+        data += "<br/><br/><input type='button' value='Change Value 1' onclick='changeValue1()'>";
+        b.innerHTML = data;
+        data += "<br/><br/><input type='button' value='Change Value 2' onclick='changeValue2()'>";
+        b.innerHTML=data;
+    }
+        function changeValue2() {
+            let positionX = prompt("X: ");
+            let positionY = prompt("Y: ");
+            data = "";
+            board[positionX][positionY] = "O";
+            for (let i = 0; i < 5; i++) {
+                data += "<br/>";
+                for (let j = 0; j < 5; j++) {
+                    data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp;";
+                }
+            }
+            data += "<br/><br/><input type='button' value='Change Value 1' onclick='changeValue1()'>";
+            b.innerHTML = data;
+            data += "<br/><br/><input type='button' value='Change Value 2' onclick='changeValue2()'>";
+            b.innerHTML=data;
+
+    }
+    function checkWin(val) {
+        if(val===board[i][j]){
+            return true;
+        }
+    }
+</script>
+</body>
+</html>

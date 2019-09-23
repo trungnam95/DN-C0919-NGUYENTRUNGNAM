@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputAmount=parseInt(prompt("nhập số lượng giá trị của mảng"));
+    let array=[];
+    let max=[0];
+    let index;
+    for (let i=0;i<inputAmount;i++){
+        let input=parseInt(prompt("nhập vào giá trị thứ "+i+"là: "));
+        array.push(input);
+
+    }
+    document.write("mảng là: "+array);
+    for(let j=0;j<array.length;j++){
+        if(array[j]>max){
+            max=array[j];
+            index=j;
+        }
+    }document.write("giá trị lớn nhất trong mảng là: "+max+"nằm ở vị trí: "+index)
+</script>
+</body>
+</html>

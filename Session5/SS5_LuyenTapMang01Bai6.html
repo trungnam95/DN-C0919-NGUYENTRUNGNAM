@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let dem = 0;
+    let array = [];
+    do {
+        let input = parseInt(prompt("nhập vào:"));
+        array.push(input);
+        dem++;
+    } while (dem < 3);
+
+    let inputFind = parseInt(prompt("nhập vào phần tử số nguyên V"));
+
+    let check = false;//gắn cờ
+    for (let i = 0; i < array.length; i++) {
+        if (inputFind === array[i]) {
+            document.write("có trong mảng");
+            check=true;
+        }
+    }
+    if(!check){//checkLookUp=false
+        document.write("ko có");
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tb=0;
+    let tongArray=0;
+    let inputAmount=parseInt(prompt("Nhập vào số lượng giá trị muốn đưa vào mảng"));
+    let array=[];
+    let max=[0];
+    for (let i=0;i<inputAmount;i++){
+        let input=parseInt(prompt("Nhập vào giá trị thứ: "+i+"là: "));
+        array.push(input);
+    }document.write("mảng là: "+array+"<br>");
+    for (let j=0;j<array.length;j++){
+        if(array[j]>max){
+            max=array[j];
+        }
+    }document.write("giá trị lớn nhất trong mảng trên là: "+max+"<br>");
+    for(let k=0;k<array.length;k++){
+        tongArray+=parseInt(array[k]);
+        tb=tongArray/array.length;
+    } document.write("giá trị trung bình của mảng là" +tb);
+
+</script>
+</body>
+</html>
