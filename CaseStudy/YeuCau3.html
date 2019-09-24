@@ -11,60 +11,73 @@
     let birthdayCustomer;
     let idCard;
     let discount;
-    // let name = prompt("nhập vào tên");
-    // let CMND = prompt("nhập vào số CMND");
-    do{
-        // checkValidate=false;
-        discount=prompt("nhập vào % giảm giá");
-        if(!isNaN(discount)){
-            if(Number.parseFloat(discount)>=0 && Number.parseFloat(discount)<=100){
-                checkValidate=true;
-            }
-        }if(!checkValidate) {
-            alert("Nhập sai");
+    let nameCustomer = prompt("Nhập vào tên của bạn");
+    let nameStandardsized = "";
+    nameCustomer = nameCustomer.trim().toLowerCase();
+    for (let i = 0; i < nameCustomer.length; i++) {
+        if (nameCustomer.charAt(i) === " " && nameCustomer.charAt(i + 1) === " ") {
+            continue;
         }
-    }while (!checkValidate);
+        if (i === 0 || nameCustomer.charAt(i - 1) === " ") {
+            nameStandardsized+=nameCustomer.charAt(i).toLocaleUpperCase();
+            continue;
+        }
+        nameStandardsized += nameCustomer.charAt(i);
+    }
+    nameCustomer=nameStandardsized;
 
     do {
-        checkValidate=false;
-        idCard=prompt("Nhập vào CMND");
-        if(isNaN(idCard)){
-            alert("id card is invalid!!!Please try agian");
-           continue;
+        // checkValidate=false;
+        discount = prompt("nhập vào % giảm giá");
+        if (!isNaN(discount)) {
+            if (Number.parseFloat(discount) >= 0 && Number.parseFloat(discount) <= 100) {
+                checkValidate = true;
+            }
         }
-        idCard=Number.parseFloat(idCard);
-        if(!Number.isInteger(idCard)){
+        if (!checkValidate) {
+            alert("Nhập sai");
+        }
+    } while (!checkValidate);
+
+    do {
+        checkValidate = false;
+        idCard = prompt("Nhập vào CMND");
+        if (isNaN(idCard)) {
             alert("id card is invalid!!!Please try agian");
             continue;
         }
-        if(idCard >=100000000 && idCard<=999999999){
-            checkValidate=true;
+        idCard = Number.parseFloat(idCard);
+        if (!Number.isInteger(idCard)) {
+            alert("id card is invalid!!!Please try agian");
+            continue;
         }
-        else {
+        if (idCard >= 100000000 && idCard <= 999999999) {
+            checkValidate = true;
+        } else {
             alert("id card is invalid!!!Please try agian");
         }
-    }while(!checkValidate);
+    } while (!checkValidate);
     do {
         checkValidate = false;
         birthdayCustomer = prompt("nhập vào ngày tháng năm sinh");
-        if(birthdayCustomer.charAt(2)!=="/"||birthdayCustomer.charAt(5)!=="/"){
+        if (birthdayCustomer.charAt(2) !== "/" || birthdayCustomer.charAt(5) !== "/") {
             alert("Birthday is invalid!!!please try again");
             continue;
         }
-        let day=birthdayCustomer.substring(0,2);
-        let month=birthdayCustomer.substring(3,5);
-        let year=birthdayCustomer.substring(6,10);
-        if(!isNaN(day)&& !isNaN(month) && !isNaN(year)){
-            day=Number.parseFloat(day);
-            month=Number.parseFloat(month);
-            year=Number.parseFloat(year);
-            if(Number.isInteger(day)&&Number.isInteger(month)&& Number.isInteger(year)){
-                if(day >0 && day<32 && month>0 && month<13 && year>=1960 && year<=2019){
-                    checkValidate=true;
+        let day = birthdayCustomer.substring(0, 2);
+        let month = birthdayCustomer.substring(3, 5);
+        let year = birthdayCustomer.substring(6, 10);
+        if (!isNaN(day) && !isNaN(month) && !isNaN(year)) {
+            day = Number.parseFloat(day);
+            month = Number.parseFloat(month);
+            year = Number.parseFloat(year);
+            if (Number.isInteger(day) && Number.isInteger(month) && Number.isInteger(year)) {
+                if (day > 0 && day < 32 && month > 0 && month < 13 && year >= 1960 && year <= 2019) {
+                    checkValidate = true;
                 }
             }
         }
-        if(!checkValidate){
+        if (!checkValidate) {
             alert("Birthday is invalid!!!please try again");
         }
     } while (!checkValidate);
@@ -88,8 +101,7 @@
         }
     } while (!checkValidate);
 
-    alert(birthdayCustomer+"\n"+emailCustomer+"\n"+idCard+"\n"+discount);
-
+    alert(birthdayCustomer + "\n" + emailCustomer + "\n" + idCard + "\n" + discount+ "\n" + nameCustomer);
 
 
     // let address = prompt("nhập vào địa chỉ");

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="SS6_HamKTSNT.js"></script>
+</head>
+<body>
+<script>
+    let check = false;
+    do {
+        let reInput = parseInt(prompt("nhập lại 1 số >=2 để kiểm tra"));
+        if (reInput >= 2) {
+            if (reInput === 2) {
+                alert("là SNT");
+                check = true;
+                break;
+            }
+            if (SNT(reInput)) {
+                alert("là SNT");
+                check = true;
+                break;
+            }
+            if (!SNT(reInput)) {
+                alert("ko là SNT");
+                check = true;
+                break;
+            }
+        }
+    } while (!check);
+</script>
+</body>
+</html>

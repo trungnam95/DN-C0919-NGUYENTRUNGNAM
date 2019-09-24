@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="Bai9.js"></script>
+</head>
+<body>
+<script>
+    let array=[];
+    let inputAmount=parseInt(prompt("nhập vào số lượng giá trị"));
+    for (let i=1;i<=inputAmount;i++){
+        let input=parseInt(prompt("giá trị thứ "+i+"là:"));
+        array.push(input);
+    }
+    let inputFind=parseInt(prompt("nhập vào giá trị muốn tìm"));
+    let kq=findArray(inputFind,array);
+    document.write("mảng là:"+array);
+    document.write("số "+inputFind+" xuất hiện "+kq+" lần");
+</script>
+</body>
+</html>

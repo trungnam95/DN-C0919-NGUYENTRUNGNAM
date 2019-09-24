@@ -6,25 +6,39 @@
 </head>
 <body>
 <script>
-    let arrayAmount=parseInt(prompt("Nhập vào số lượng phần tử trong mảng"));
-    let array=[];
-    for (let i=1;i<=arrayAmount;i++) {
-        let input=parseInt(prompt("Nhập vào phần tử thứ "+i+"là: "));
+    let arrayAmount = parseInt(prompt("Nhập vào số lượng phần tử trong mảng"));
+    let array = [];
+    for (let i = 1; i <= arrayAmount; i++) {
+        let input = parseInt(prompt("Nhập vào phần tử thứ " + i + "là: "));
         array.push(input);
     }
-    let inputFind=parseInt(prompt("Nhập vào phần tử muốn xóa trong mảng"));
-    let check=false;
-    for (let j=0;j<array.length;j++){
-        if(inputFind===array[j]){
-            array[j]=array[j+1];
-            array[j+1]=0;
+    let inputFind = parseInt(prompt("Nhập vào phần tử muốn xóa trong mảng"));
+    let check = false;
+    // let demRemove=0;
+    for (let j = 0; j <= array.length; j++) {
+            if (inputFind === array[j]){
+            array.splice(j,1);
+            // demRemove++;
             check=true;
-            }
-        document.write(array[j]);
+            j--;
+        }
     }
-    if(!check){
+
+    //     if (inputFind === array[j]) {
+    //         demRemove++;
+    //         for (let k = j; k < array.length; k++) {
+    //             array[k] = array[k + 1];
+    //         }
+    //         check = true;
+    //         j--;
+    //     }
+    // }
+    if (!check) {
         document.write("ko tồn tại trong mảng");
     }
+    // array.length = array.length-demRemove;
+    document.write(array+"<br/>");
+
 </script>
 </body>
 </html>
