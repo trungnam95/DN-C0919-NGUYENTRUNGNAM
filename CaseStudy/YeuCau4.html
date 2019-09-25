@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input = prompt("1.Add New Customer" + "\n" + "2.Delete Customer") * 1;
+    switch (input) {
+        case 1:
+            let arrayNameCustomer = [];
+            let inputAmount = parseInt(prompt("Nhập vào số lượng customer muốn thêm"));
+            for (let i = 1; i <= inputAmount; i++) {
+                let nameCustomer = prompt("Tên Customer thứ: " + i + "là: ");
+                arrayNameCustomer.push(nameCustomer);
+            }
+            alert(arrayNameCustomer);
+            alert(arrayNameCustomer.sort());
+            break;
+        case 2:
+            let arrayName = ["Nam", "Nam", "Tôm", "Nga", "Nhơn", "Duy", "Nhân", "Liệu", "Thuân", "Bình"];
+            alert(arrayName);
+            let deleteCustomer = confirm("Bạn có muốn xóa tên nào không?");
+            if (deleteCustomer) {
+                let inputDeleteCustomer = prompt("nhập vào 1 tên bạn muốn xóa");
+                let check = false;
+                for (let i = 0; i < arrayName.length; i++) {
+                    if (inputDeleteCustomer === arrayName[i]) {
+                        arrayName.splice(i, 1);
+                        i--;
+                        check = true;
+                    }
+                }
+                if (!check) {
+                    alert("nhập lại");
+                }
+                alert("Danh sách customer sau khi xóa là:" + arrayName);
+            } else {
+                alert("cút");
+            }
+            break;
+        default:
+    }
+</script>
+</body>
+</html>
