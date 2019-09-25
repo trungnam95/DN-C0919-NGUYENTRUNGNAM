@@ -12,11 +12,19 @@
             let arrayNameCustomer = [];
             let inputAmount = parseInt(prompt("Nhập vào số lượng customer muốn thêm"));
             for (let i = 1; i <= inputAmount; i++) {
-                let nameCustomer = prompt("Tên Customer thứ: " + i + "là: ");
-                arrayNameCustomer.push(nameCustomer);
+                arrayNameCustomer.push(prompt("Tên Customer thứ: " + i + "là: "));
             }
-            alert(arrayNameCustomer);
-            alert(arrayNameCustomer.sort());
+            let result="";
+            for(let i=0;i<arrayNameCustomer.length;i++){
+                result+="\n"+(i+1)+". "+arrayNameCustomer[i];
+            }
+            alert(result);
+            arrayNameCustomer.sort();
+            result="";
+            for(let i=0;i<arrayNameCustomer.length;i++){
+                result+="\n"+(i+1)+". "+arrayNameCustomer[i];
+            }
+            alert(result);
             break;
         case 2:
             let arrayName = ["Nam", "Nam", "Tôm", "Nga", "Nhơn", "Duy", "Nhân", "Liệu", "Thuân", "Bình"];

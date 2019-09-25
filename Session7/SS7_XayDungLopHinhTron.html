@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Circles=function(radius){
+        this.radius=radius;
+        this.getRadius=function () {
+            return this.radius;
+        };
+        this.setRadius=function(){
+            this.radius=radius;
+        };
+        this.getArea=function () {
+            return Math.PI*radius*radius;
+        };
+    };
+    let circle=new Circles(parseFloat(prompt("nhâp vào bán kính:")));
+    // let a=parseFloat(prompt("nhập vào bán kính"));
+    // circle.setRadius(a.value);
+    let radius=circle.getRadius();
+    let area=circle.getArea();
+    alert("radius "+" "+radius+" "+"area"+" "+area);
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let MyDate=function (date) {
+        this.date=date;
+        this.getDate=function () {
+            return this.date;
+        };
+        this.setDate=function (date) {
+            this.date=date;
+        }
+    };
+    let output= new MyDate();
+    let a=prompt("nhập vào 1 ngày tháng năm sinh");
+    output.setDate(a);
+    let date=output.getDate();
+    alert(date.toString());
+</script>
+</body>
+</html>
