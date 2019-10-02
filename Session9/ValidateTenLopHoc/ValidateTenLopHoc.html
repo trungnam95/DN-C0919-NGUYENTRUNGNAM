@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="ValidateTenLopHoc.js"></script>
+</head>
+<body>
+<form>
+    <p>INPUT CLASS</p>
+    <input type="text" id="class">
+    <input type="button" onclick="Click()" value="SUBMIT">
+    <p id="output"></p>
+</form>
+<script type="text/javascript" src="ValidateTenLopHoc.js"></script>
+<script>
+    let input=document.getElementById("class");
+    function Click() {
+        if(checkClassName(input.value)){
+            document.getElementById("output").innerHTML=input.value;
+        }else
+            alert("nhap sai");
+    }
+</script>
+</body>
+</html>
