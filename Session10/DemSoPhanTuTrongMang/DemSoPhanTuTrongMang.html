@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="DemSoPhanTuTrongMang.js"></script>
+</head>
+<body>
+<script>
+    let array=[];
+    let inputAmount=prompt("Nhap vao so luong phan tu muon them:");
+    for (let i=1;i<=inputAmount;i++){
+        array.push(prompt("nhap vao phan tu thu: "+i+"la: "));
+    }
+    alert("cac phan tu bao gom: "+array);
+    let inputFind=prompt("nhap vao phan tu muon tim kiem va dem so lan xuat hien");
+    alert("gia tri "+inputFind+"xuat hien" +find(inputFind,array)+"lan");
+</script>
+</body>
+</html>
