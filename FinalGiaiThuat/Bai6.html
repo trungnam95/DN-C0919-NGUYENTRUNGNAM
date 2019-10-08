@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function chan(val) {
+        let kqChan = 1;
+        for (let i = 2; i <= val; i++) {
+            if (i % 2 === 0) {
+                kqChan *= i;
+            }
+        }
+        return kqChan;
+    }
+
+    function le(val) {
+        let kqLe = 1;
+        for (let i = 1; i <= val; i++) {
+            if (i % 2 !== 0) {
+                kqLe *= i;
+            }
+        }
+        return kqLe;
+    }
+
+    let n = parseInt(prompt("input N"));
+    if (n % 2 === 0) {
+        alert(chan(n));
+    } else {
+        alert(le(n));
+    }
+</script>
+</body>
+</html>

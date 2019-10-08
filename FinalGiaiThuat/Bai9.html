@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[];
+    let input = prompt("input :");
+    for (let i = 0; i <input.length ; i++) {
+        arr.push(input.charAt(i));
+    }
+    alert(arr.reverse().join(""));
+    alert(input.toUpperCase());
+    alert(input.toLowerCase());
+    let check=/^[a-z]$/;
+    for (let i = 0; i <arr.length ; i++) {
+        if(check.test(arr[i])){
+           document.write(arr[i].toUpperCase()) ;
+        }else{
+           document.write(arr[i].toLowerCase()) ;
+        }
+    }
+</script>
+</body>
+</html>

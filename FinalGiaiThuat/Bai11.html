@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let inputAmount = parseInt(prompt("input amount:"));
+    for (let i = 1; i <= inputAmount; i++) {
+        arr.push(parseInt(prompt("input " + i + ": ")));
+    }
+    let result = 0;
+    for (let j = 0; j < arr.length; j++) {
+        if (arr[j] % 2 !== 0 && arr[j] > 0) {
+            result += arr[j];
+        }
+    }
+    document.write("tong so duong le la: " + result+"<br>");
+    let find = parseInt(prompt("input find:"));
+    let check=false;
+    for (let i = 0; i < arr.length; i++) {
+        if (find === arr[i]) {
+            document.write("tim thay o vi tri thu: " + (i + 1)+"<br>");
+            check=true;
+        }
+    }
+    if(!check){
+        document.write("ko co"+"<br>");
+    }
+    document.write(arr.sort(function(a, b){return a-b})+"<br>");
+    let add=parseInt(prompt("input them:"));
+    arr.push(add);
+    document.write(arr.sort(function(a, b){return a-b})+"<br>");
+
+</script>
+</body>
+</html>

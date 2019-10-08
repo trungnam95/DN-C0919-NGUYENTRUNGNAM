@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let year = parseInt(prompt("input year"));
+    let month = parseInt(prompt("input month"));
+    switch (month) {
+        case 1:
+            alert("year: " + year + " month: " + month + " have: 31 days");
+            break;
+        case 2:
+            if (year % 400 === 0 || (year % 4 === 0 && year % 100 !== 0))
+            {
+                document.write("năm nhuận"+year+"có 29 ngày");
+            } else
+                document.write("năm không nhuận"+year+"có 28 ngày");
+            break;
+        case 3:
+            document.write("year: " + year + " month: " + month + " have: 31 days");
+            break;
+        case 4:
+            document.write("year: " + year + " month: " + month + " have: 30 days");
+            break;
+        case 5:
+            document.write("year: " + year + " month: " + month + " have: 31 days");
+            break;
+        case 6:
+            document.write("year: " + year + " month: " + month + " have: 30 days");
+            break;
+        case 7:
+            document.write("year: " + year + " month: " + month + " have: 31 days");
+            break;
+        case 8:
+            document.write("year: " + year + " month: " + month + " have: 31 days");
+            break;
+        case 9:
+            document.write("year: " + year + " month: " + month + " have: 30 days");
+            break;
+        case 10:
+            document.write("year: " + year + " month: " + month + " have: 31 days");
+            break;
+        case 11:
+            document.write("year: " + year + " month: " + month + " have: 30 days");
+            break;
+        case 12:
+            document.write("year: " + year + " month: " + month + " have: 31 days");
+            break;
+    }
+</script>
+</body>
+</html>

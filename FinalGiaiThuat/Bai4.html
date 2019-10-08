@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let kq=1;
+    // let result=0;
+    // let n=parseInt(prompt("input N"));
+    // for (let i = 1; i <=n ; i++) {
+    //     kq*=i;
+    //     result+=Math.pow(-1,i)*(1/kq);
+    // }document.write(result);
+    function giaiThua(val) {
+        let result=0;
+        let kq=1;
+        for (let i = 1; i <=val ; i++) {
+            kq*=i;
+            result+=Math.pow(-1,i)*(1/kq);
+        }return result;
+    }
+    let n=parseInt(prompt("input N"));
+    alert(15-giaiThua(n));
+</script>
+</body>
+</html>

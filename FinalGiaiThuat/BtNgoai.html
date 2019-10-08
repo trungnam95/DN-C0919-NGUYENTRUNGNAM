@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let height=parseInt(prompt("input height"));
+    let up=parseInt(prompt("input up"));
+    let down=parseInt(prompt("input down"));
+    if(up>=height){
+        alert("1 day");
+    }else if(down>=height){
+        alert("false");
+    }else{
+        for (let i = 1; i <=100 ; i++) {
+            if(((up*i)-(down*(i-1))>=height)){
+                alert(i+"day");
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
